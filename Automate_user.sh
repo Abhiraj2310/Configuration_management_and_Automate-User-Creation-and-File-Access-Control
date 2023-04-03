@@ -13,6 +13,7 @@ sudo adduser TechEng_01 Technical
 sudo chgrp -R Technical /Technical
 sudo chmod -R 775 /Technical
 sudo setfacl -dr -m g:Technical:rwx /Technical
+#Creating New Group as Manager,adding GenManager_01 user to the group, Granting access to specific directory
 
 sudo groupadd Manager
 sudo adduser GenManager_01 Manager
