@@ -4,8 +4,8 @@
   become: true
 
   vars:
-    github_repo_url: https://github.com/yourusername/your-repo.git
-    shell_script_path: /path/to/your-shell-script.sh
+    github_repo_url: https://github.com/Abhiraj2310/Configuration_management_and_Automate-User-Creation-and-File-Access-Control.git
+    shell_script_path: /path/to/Automate_user.sh
 
   tasks:
   - name: Update apt cache
@@ -59,17 +59,17 @@
 
   - name: Clone GitHub repo
     git:
-      repo: "{{ github_repo_url }}"
+      repo: https://github.com/Abhiraj2310/Configuration_management_and_Automate-User-Creation-and-File-Access-Control.git
       dest: /opt/jenkins
       clone: yes
 
   - name: Copy shell script
     copy:
-      src: "{{ shell_script_path }}"
+      src: /opt/jenkins/Configuration_management_and_Automate-User-Creation-and-File-Access-Control
       dest: /opt/jenkins
       owner: jenkins
       group: jenkins
       mode: '0755'
 
   - name: Execute shell script
-    shell: "/opt/jenkins/your-shell-script.sh"
+    shell: "/opt/jenkins/Automate_user.sh"
