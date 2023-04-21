@@ -64,12 +64,12 @@
       clone: yes
 
   - name: Copy shell script
-    copy:
-      src: /opt/jenkins/Configuration_management_and_Automate-User-Creation-and-File-Access-Control
-      dest: /opt/jenkins
-      owner: jenkins
-      group: jenkins
-      mode: '0755'
+  copy:
+    src: /opt/jenkins/Configuration_management_and_Automate-User-Creation-and-File-Access-Control/Automate_user.sh
+    dest: /opt/jenkins
+    owner: jenkins
+    group: jenkins
+    mode: '0755'
 
   - name: Execute shell script
     shell: "/opt/jenkins/Automate_user.sh"
